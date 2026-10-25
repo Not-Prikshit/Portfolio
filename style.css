@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    background: black;
+    overflow: hidden;
+}
+.wallpaper,.folders-assets,.tv-overlay{
+    position:absolute;
+}
+.tv-container{
+    position: relative;
+    width: min(100vw, 134.9vh);
+    aspect-ratio: 1457/1080;
+    margin:auto;
+}
+.portfolio{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    z-index:1;
+}
+.wallpaper{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index:1;
+}
+.folders-assets{
+    z-index:2;
+    top:12%;
+    left:10%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+
+}
+.tv-overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none; 
+}
+.folders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:75px;
+    gap:1px;
+    color:white;
+    font-family:Arial, sans-serif;
+    font-size:20px;
+    text-align:center;
+    text-shadow:1px 1px 3px black;
+    cursor: pointer;
+
+
+}
+
+.folders img {
+    width:80px;
+    height:80px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .tv-container {
+        width: 100vw;
+        height: 100dvh;
+        aspect-ratio: auto;
+    }
+}
